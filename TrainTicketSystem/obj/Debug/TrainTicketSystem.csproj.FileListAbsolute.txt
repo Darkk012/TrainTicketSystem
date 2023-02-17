@@ -1,0 +1,13 @@
+F:\programs\TrainTicketSystem\TrainTicketSystem\bin\Debug\TrainTicketSystem.exe.config
+F:\programs\TrainTicketSystem\TrainTicketSystem\bin\Debug\TrainTicketSystem.exe
+F:\programs\TrainTicketSystem\TrainTicketSystem\bin\Debug\TrainTicketSystem.pdb
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.csproj.AssemblyReference.cache
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.csproj.SuggestedBindingRedirects.cache
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.LoginForm.resources
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.Properties.Resources.resources
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.csproj.GenerateResource.cache
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.csproj.CoreCompileInputs.cache
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.exe
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.pdb
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.TicketBuyerForm.resources
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.AdministratorForm.resources
