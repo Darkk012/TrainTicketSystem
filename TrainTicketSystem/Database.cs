@@ -151,6 +151,18 @@ namespace TrainTicketSystem
             return s;
         }
 
+        public int getTotalIncome(int rid) 
+        {
+            int income = 0;
+            var inc = _connection.Query<Tickets>("SELECT price from Tickets where id_route=" + rid);
+            foreach (var i in inc)
+            {
+                income += i.price;
+            }
+            return income;
+        }
+
+
     }
 
     [Table("Route")]

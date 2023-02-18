@@ -17,8 +17,8 @@ namespace TrainTicketSystem
             InitializeComponent();
 
             //tesztelesez
-            userNameTb.Text = "vasarlo";
-            passwordTb.Text = "vasarlo1";
+            userNameTb.Text = "admin";
+            passwordTb.Text = "admin1";
 
         }
 
