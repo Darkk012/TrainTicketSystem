@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SQLite;
 
 namespace TrainTicketSystem
 {
@@ -20,6 +21,7 @@ namespace TrainTicketSystem
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             Application.Run();
+            var db = new DatabaseHandler();
         }
     }
 }
