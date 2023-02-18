@@ -82,6 +82,7 @@
             this.userNameTb.Name = "userNameTb";
             this.userNameTb.Size = new System.Drawing.Size(150, 26);
             this.userNameTb.TabIndex = 3;
+            this.userNameTb.Text = "username";
             // 
             // passwordTb
             // 

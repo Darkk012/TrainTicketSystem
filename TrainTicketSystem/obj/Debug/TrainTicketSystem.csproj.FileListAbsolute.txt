@@ -29,3 +29,4 @@ F:\programs\TrainTicketSystem\TrainTicketSystem\bin\Debug\System.Memory.xml
 F:\programs\TrainTicketSystem\TrainTicketSystem\bin\Debug\System.Numerics.Vectors.xml
 F:\programs\TrainTicketSystem\TrainTicketSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.csproj.CopyComplete
+F:\programs\TrainTicketSystem\TrainTicketSystem\obj\Debug\TrainTicketSystem.PayingForm.resources

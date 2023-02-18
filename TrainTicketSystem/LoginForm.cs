@@ -15,8 +15,14 @@ namespace TrainTicketSystem
         public LoginForm()
         {
             InitializeComponent();
+
+            //tesztelesez
+            userNameTb.Text = "vasarlo";
+            passwordTb.Text = "vasarlo1";
+
         }
 
+        //bejelentkezés
         private void loginBt_Click(object sender, EventArgs e)
         {
             string username=userNameTb.Text,password=passwordTb.Text;
