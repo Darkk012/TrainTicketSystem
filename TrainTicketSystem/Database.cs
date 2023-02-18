@@ -128,7 +128,7 @@ namespace TrainTicketSystem
             return stopNum[0].stopsNumber.ToString();
         }
 
-        public void insertTicket(int rid,string bName,int fc,int sc,int coupon,bool fullT,int price,List<string> seats)
+        public void insertTicket(int rid,string bName,int fc,int sc,int coupon,bool fullT,int price,List<int> seats)
         {
             _connection.Insert(new Tickets {id_route=rid,buyerName=bName,firstClassTickets=fc,secondClassTickets=sc,coupon=coupon,
                                             fullTicket=fullT,price=price,done=false });
@@ -140,10 +140,10 @@ namespace TrainTicketSystem
             MessageBox.Show("Jegy sikeresen meg lett véve!");
         }
 
-        public List<string> getTakenSeats(int rid)
+        public List<int> getTakenSeats(int rid)
         {
-            List<string> s = new List<string>();
-            var seats = _connection.Query<Seats>("SELECT seatCode from Seats WHERE id_tickets='"+ rid+"'");
+            List<int> s = new List<int>();
+            var seats = _connection.Query<Seats>("SELECT seatCode from Seats WHERE id_tickets in (SELECT id from Tickets where id_route='"+ rid+ "')");
             foreach (var seat in seats)
             {
                 s.Add(seat.seatCode);
@@ -193,7 +193,7 @@ namespace TrainTicketSystem
     {
         [PrimaryKey, AutoIncrement][Column("id")] public int Id { get; set; }
         [Column("id_tickets")] public int id_tickets { get; set; }
-        [Column("seatCode")] public string seatCode { get; set; }
+        [Column("seatCode")] public int seatCode { get; set; }
     }
 
 }

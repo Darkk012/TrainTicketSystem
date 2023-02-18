@@ -17,16 +17,12 @@ namespace TrainTicketSystem
         DatabaseHandler db = new DatabaseHandler();
         int firstClassNum = 0;
         int secondClassNum= 0;
-        List<string> seats = new List<string>();
+        List<int> seats = new List<int>();
 
         public TicketBuyerForm()
         {
             InitializeComponent(); 
-            //to do: Kell még hogy az ülések rendesen lehesen kiválasztani(virushelyzetes dolog)
-
-
-
-
+            disableChecboxes();
 
         }
 
@@ -78,6 +74,7 @@ namespace TrainTicketSystem
             {
                 routeType.Items.Add(types[i]);
             }
+            disableChecboxes();
 
         }
 
@@ -86,7 +83,7 @@ namespace TrainTicketSystem
         {
             CheckBox c = (CheckBox)sender;
             if (c.Checked) {
-                seats.Add(c.Text);
+                seats.Add(Int32.Parse(c.Text));
                 if (c.Text[0] == 'a' || c.Text[0] == 'b' || c.Text[0] == 'c' || c.Text[0] == 'd' || c.Text[0] == 'e') {
                     firstClassNum++;
                 }
@@ -97,7 +94,7 @@ namespace TrainTicketSystem
             }
             else
             {
-                seats.Remove(c.Text);
+                seats.Remove(Int32.Parse(c.Text));
                 if (c.Text[0] == 'a' || c.Text[0] == 'b' || c.Text[0] == 'c' || c.Text[0] == 'd' || c.Text[0] == 'e')
                 {
                     firstClassNum--;
@@ -140,5 +137,117 @@ namespace TrainTicketSystem
                 MessageBox.Show("Hiba!\nNincsen vonatjárat kiválasztva!");
             }
         }
+
+        //ülések berakása
+        private void routeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string stations = routes.SelectedItem.ToString();
+            string type = routeType.SelectedItem.ToString();
+            List<string> takenSeats = new List<string>();
+            List<int> ts = new List<int>();
+            ts = db.getTakenSeats(db.getRouteId(stations.Split('-')[0], stations.Split('-')[1], type));
+
+            foreach (Control c in firstClassCar.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    int cbNum = Int32.Parse(cb.Text);
+                    if (ts.Contains(cbNum) || ts.Contains(cbNum-1) || ts.Contains(cbNum + 1) || ts.Contains(cbNum - 10) || (ts.Contains(cbNum + 10) && cbNum+10<61)) 
+                    {
+                        takenSeats.Add(cb.Text);
+                    } 
+                }
+            }
+            foreach (Control c in seconcCarClass.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    int cbNum = Int32.Parse(cb.Text);
+                    if (cbNum%10==3)
+                    {
+                        if(ts.Contains(cbNum) || ts.Contains(cbNum - 1) || ts.Contains(cbNum - 3) || ts.Contains(cbNum + 3)) 
+                            takenSeats.Add(cb.Text);
+
+                    }
+                    else if (cbNum % 10 == 4)
+                    {
+                        if(ts.Contains(cbNum) || ts.Contains(cbNum + 1) || ts.Contains(cbNum - 3) || ts.Contains(cbNum + 3))
+                            takenSeats.Add(cb.Text);
+
+                    }
+                    else if (ts.Contains(cbNum) || ts.Contains(cbNum - 1) || ts.Contains(cbNum + 1) || ts.Contains(cbNum - 3) || ts.Contains(cbNum + 3))
+                    {
+                        takenSeats.Add(cb.Text);
+                    }
+                }
+            }
+
+            foreach (Control c in firstClassCar.Controls ) 
+            {
+                if(c is CheckBox)
+                {
+                    CheckBox cb= (CheckBox)c;
+                    if (takenSeats.Contains(cb.Text))
+                    {
+                        cb.BackColor = Color.LightCoral;
+                        cb.Enabled = false;
+                    }
+                    else 
+                    {
+                        cb.BackColor = Color.LightGreen;
+                        cb.Enabled = true;
+                    }
+                }
+            
+            }
+            foreach (Control c in seconcCarClass.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    if (takenSeats.Contains(cb.Text))
+                    {
+                        cb.BackColor = Color.LightCoral;
+                        cb.Enabled = false;
+                    }
+                    else
+                    {
+                        cb.BackColor = Color.LightGreen;
+                        cb.Enabled = true;
+                    }
+
+                }
+
+            }
+        }
+
+        //done jegyek ne jelenjenek meg
+
+        //checkboxok kikapcsolása
+        private void disableChecboxes()
+        {
+            foreach (Control c in firstClassCar.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    cb.BackColor = Color.LightCoral;
+                    cb.Enabled = false;
+                }
+            }
+            foreach (Control c in seconcCarClass.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    cb.BackColor = Color.LightCoral;
+                    cb.Enabled = false;
+                }
+
+            }
+        }
+
     }
 }

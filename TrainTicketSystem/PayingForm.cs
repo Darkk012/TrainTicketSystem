@@ -24,9 +24,9 @@ namespace TrainTicketSystem
         int priceBonus = 0;
         string name = "";
 
-        List<string> seats = new List<string>();
+        List<int> seats = new List<int>();
 
-        public PayingForm(int rid,int fcNum,int scNum,List<String> s)
+        public PayingForm(int rid,int fcNum,int scNum,List<int> s)
         {
             InitializeComponent();
             routeId= rid;
@@ -129,15 +129,18 @@ namespace TrainTicketSystem
         //megálló kiválasztása
         private void stationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (stationBox.SelectedItem.ToString().Split('.')[0] != db.getStopsById(routeId))
-            {
-                priceBonus = 500;
+            if (stationBox.SelectedItem != null) {
+                if (stationBox.SelectedItem.ToString().Split('.')[0] != db.getStopsById(routeId))
+                {
+                    priceBonus = 500;
+                }
+                else
+                {
+                    priceBonus = 0;
+                }
+                changePrice();
             }
-            else
-            {
-                priceBonus = 0;
-            }
-            changePrice();
+            
         }
     }
 }
