@@ -81,6 +81,7 @@
             this.routeType = new System.Windows.Forms.ComboBox();
             this.routes = new System.Windows.Forms.ComboBox();
             this.incomeLabel = new System.Windows.Forms.Label();
+            this.finishRoutes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +98,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1009, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(772, 25);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -199,6 +200,7 @@
             this.cb86.TabIndex = 17;
             this.cb86.Text = "86";
             this.cb86.UseVisualStyleBackColor = false;
+            this.cb86.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb61
             // 
@@ -215,6 +217,7 @@
             this.cb61.TabIndex = 0;
             this.cb61.Text = "61";
             this.cb61.UseVisualStyleBackColor = false;
+            this.cb61.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb62
             // 
@@ -231,6 +234,7 @@
             this.cb62.TabIndex = 1;
             this.cb62.Text = "62";
             this.cb62.UseVisualStyleBackColor = false;
+            this.cb62.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb85
             // 
@@ -247,6 +251,7 @@
             this.cb85.TabIndex = 16;
             this.cb85.Text = "85";
             this.cb85.UseVisualStyleBackColor = false;
+            this.cb85.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb63
             // 
@@ -263,6 +268,7 @@
             this.cb63.TabIndex = 2;
             this.cb63.Text = "63";
             this.cb63.UseVisualStyleBackColor = false;
+            this.cb63.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb64
             // 
@@ -279,6 +285,7 @@
             this.cb64.TabIndex = 3;
             this.cb64.Text = "64";
             this.cb64.UseVisualStyleBackColor = false;
+            this.cb64.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb84
             // 
@@ -295,6 +302,7 @@
             this.cb84.TabIndex = 15;
             this.cb84.Text = "84";
             this.cb84.UseVisualStyleBackColor = false;
+            this.cb84.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb65
             // 
@@ -311,6 +319,7 @@
             this.cb65.TabIndex = 4;
             this.cb65.Text = "65";
             this.cb65.UseVisualStyleBackColor = false;
+            this.cb65.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb66
             // 
@@ -327,6 +336,7 @@
             this.cb66.TabIndex = 5;
             this.cb66.Text = "66";
             this.cb66.UseVisualStyleBackColor = false;
+            this.cb66.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb83
             // 
@@ -343,6 +353,7 @@
             this.cb83.TabIndex = 14;
             this.cb83.Text = "83";
             this.cb83.UseVisualStyleBackColor = false;
+            this.cb83.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb71
             // 
@@ -359,6 +370,7 @@
             this.cb71.TabIndex = 6;
             this.cb71.Text = "71";
             this.cb71.UseVisualStyleBackColor = false;
+            this.cb71.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb72
             // 
@@ -375,6 +387,7 @@
             this.cb72.TabIndex = 7;
             this.cb72.Text = "72";
             this.cb72.UseVisualStyleBackColor = false;
+            this.cb72.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb82
             // 
@@ -391,6 +404,7 @@
             this.cb82.TabIndex = 13;
             this.cb82.Text = "82";
             this.cb82.UseVisualStyleBackColor = false;
+            this.cb82.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb73
             // 
@@ -407,6 +421,7 @@
             this.cb73.TabIndex = 8;
             this.cb73.Text = "73";
             this.cb73.UseVisualStyleBackColor = false;
+            this.cb73.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb74
             // 
@@ -423,6 +438,7 @@
             this.cb74.TabIndex = 9;
             this.cb74.Text = "74";
             this.cb74.UseVisualStyleBackColor = false;
+            this.cb74.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb81
             // 
@@ -439,6 +455,7 @@
             this.cb81.TabIndex = 12;
             this.cb81.Text = "81";
             this.cb81.UseVisualStyleBackColor = false;
+            this.cb81.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb75
             // 
@@ -455,6 +472,7 @@
             this.cb75.TabIndex = 10;
             this.cb75.Text = "75";
             this.cb75.UseVisualStyleBackColor = false;
+            this.cb75.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb76
             // 
@@ -471,6 +489,7 @@
             this.cb76.TabIndex = 11;
             this.cb76.Text = "76";
             this.cb76.UseVisualStyleBackColor = false;
+            this.cb76.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // firstClassCar
             // 
@@ -516,6 +535,7 @@
             this.cb54.TabIndex = 24;
             this.cb54.Text = "54";
             this.cb54.UseVisualStyleBackColor = false;
+            this.cb54.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb11
             // 
@@ -531,6 +551,7 @@
             this.cb11.TabIndex = 0;
             this.cb11.Text = "11";
             this.cb11.UseVisualStyleBackColor = false;
+            this.cb11.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb12
             // 
@@ -546,6 +567,7 @@
             this.cb12.TabIndex = 1;
             this.cb12.Text = "12";
             this.cb12.UseVisualStyleBackColor = false;
+            this.cb12.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb24
             // 
@@ -561,6 +583,7 @@
             this.cb24.TabIndex = 7;
             this.cb24.Text = "24";
             this.cb24.UseVisualStyleBackColor = false;
+            this.cb24.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb13
             // 
@@ -576,6 +599,7 @@
             this.cb13.TabIndex = 2;
             this.cb13.Text = "13";
             this.cb13.UseVisualStyleBackColor = false;
+            this.cb13.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb53
             // 
@@ -591,6 +615,7 @@
             this.cb53.TabIndex = 23;
             this.cb53.Text = "53";
             this.cb53.UseVisualStyleBackColor = false;
+            this.cb53.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb14
             // 
@@ -606,6 +631,7 @@
             this.cb14.TabIndex = 3;
             this.cb14.Text = "14";
             this.cb14.UseVisualStyleBackColor = false;
+            this.cb14.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb23
             // 
@@ -621,6 +647,7 @@
             this.cb23.TabIndex = 6;
             this.cb23.Text = "23";
             this.cb23.UseVisualStyleBackColor = false;
+            this.cb23.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb21
             // 
@@ -636,6 +663,7 @@
             this.cb21.TabIndex = 4;
             this.cb21.Text = "21";
             this.cb21.UseVisualStyleBackColor = false;
+            this.cb21.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb22
             // 
@@ -651,6 +679,7 @@
             this.cb22.TabIndex = 5;
             this.cb22.Text = "22";
             this.cb22.UseVisualStyleBackColor = false;
+            this.cb22.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb44
             // 
@@ -666,6 +695,7 @@
             this.cb44.TabIndex = 15;
             this.cb44.Text = "44";
             this.cb44.UseVisualStyleBackColor = false;
+            this.cb44.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb52
             // 
@@ -681,6 +711,7 @@
             this.cb52.TabIndex = 22;
             this.cb52.Text = "52";
             this.cb52.UseVisualStyleBackColor = false;
+            this.cb52.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb31
             // 
@@ -696,6 +727,7 @@
             this.cb31.TabIndex = 8;
             this.cb31.Text = "31";
             this.cb31.UseVisualStyleBackColor = false;
+            this.cb31.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb32
             // 
@@ -711,6 +743,7 @@
             this.cb32.TabIndex = 9;
             this.cb32.Text = "32";
             this.cb32.UseVisualStyleBackColor = false;
+            this.cb32.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb33
             // 
@@ -726,6 +759,7 @@
             this.cb33.TabIndex = 10;
             this.cb33.Text = "33";
             this.cb33.UseVisualStyleBackColor = false;
+            this.cb33.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb34
             // 
@@ -741,6 +775,7 @@
             this.cb34.TabIndex = 11;
             this.cb34.Text = "34";
             this.cb34.UseVisualStyleBackColor = false;
+            this.cb34.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb41
             // 
@@ -756,6 +791,7 @@
             this.cb41.TabIndex = 12;
             this.cb41.Text = "41";
             this.cb41.UseVisualStyleBackColor = false;
+            this.cb41.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb42
             // 
@@ -771,6 +807,7 @@
             this.cb42.TabIndex = 13;
             this.cb42.Text = "42";
             this.cb42.UseVisualStyleBackColor = false;
+            this.cb42.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb43
             // 
@@ -786,6 +823,7 @@
             this.cb43.TabIndex = 14;
             this.cb43.Text = "43";
             this.cb43.UseVisualStyleBackColor = false;
+            this.cb43.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // cb51
             // 
@@ -801,6 +839,7 @@
             this.cb51.TabIndex = 21;
             this.cb51.Text = "51";
             this.cb51.UseVisualStyleBackColor = false;
+            this.cb51.Click += new System.EventHandler(this.CheckBoxClick);
             // 
             // label2
             // 
@@ -851,11 +890,22 @@
             this.incomeLabel.TabIndex = 30;
             this.incomeLabel.Text = "Teljes Bevétel:";
             // 
+            // finishRoutes
+            // 
+            this.finishRoutes.Location = new System.Drawing.Point(16, 210);
+            this.finishRoutes.Name = "finishRoutes";
+            this.finishRoutes.Size = new System.Drawing.Size(182, 43);
+            this.finishRoutes.TabIndex = 31;
+            this.finishRoutes.Text = "Útvonalak Teljesitése";
+            this.finishRoutes.UseVisualStyleBackColor = true;
+            this.finishRoutes.Click += new System.EventHandler(this.finishRoutes_Click);
+            // 
             // AdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 529);
+            this.ClientSize = new System.Drawing.Size(772, 529);
+            this.Controls.Add(this.finishRoutes);
             this.Controls.Add(this.incomeLabel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -867,6 +917,7 @@
             this.Controls.Add(this.routes);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdministratorForm";
             this.Text = "Rendszergazda";
@@ -938,5 +989,6 @@
         private System.Windows.Forms.ComboBox routeType;
         private System.Windows.Forms.ComboBox routes;
         private System.Windows.Forms.Label incomeLabel;
+        private System.Windows.Forms.Button finishRoutes;
     }
 }

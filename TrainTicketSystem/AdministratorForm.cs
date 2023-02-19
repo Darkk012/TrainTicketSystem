@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace TrainTicketSystem
             InitializeComponent();
             disableChecboxes();
             incomeLabel.Text = "Teljes Bevétel:";
+
+            //todo: done jegyeket ne töltse be
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,6 +145,25 @@ namespace TrainTicketSystem
             }
 
 
+        }
+
+        //részletesebben megnézi a jegyet
+        private void CheckBoxClick(object sender, EventArgs e)
+        {
+            CheckBox c = (CheckBox)sender;
+            string stations = routes.SelectedItem.ToString();
+            string type = routeType.SelectedItem.ToString();
+            int id = db.getTicketId(db.getRouteId(stations.Split('-')[0], stations.Split('-')[1], type), Int32.Parse(c.Text));
+            TicketInfoForm ticketInfoForm = new TicketInfoForm(id);
+            c.Checked = false;
+            ticketInfoForm.ShowDialog();
+            
+        }
+
+        //updateli a jegyeket
+        private void finishRoutes_Click(object sender, EventArgs e)
+        {
+           //todo: updateli a jegyeket
         }
     }
 }

@@ -84,7 +84,7 @@ namespace TrainTicketSystem
             CheckBox c = (CheckBox)sender;
             if (c.Checked) {
                 seats.Add(Int32.Parse(c.Text));
-                if (c.Text[0] == 'a' || c.Text[0] == 'b' || c.Text[0] == 'c' || c.Text[0] == 'd' || c.Text[0] == 'e') {
+                if (c.Text[0] == '1' || c.Text[0] == '2' || c.Text[0] == '3' || c.Text[0] == '4' || c.Text[0] == '5') {
                     firstClassNum++;
                 }
                 else
@@ -95,7 +95,7 @@ namespace TrainTicketSystem
             else
             {
                 seats.Remove(Int32.Parse(c.Text));
-                if (c.Text[0] == 'a' || c.Text[0] == 'b' || c.Text[0] == 'c' || c.Text[0] == 'd' || c.Text[0] == 'e')
+                if (c.Text[0] == '1' || c.Text[0] == '2' || c.Text[0] == '3' || c.Text[0] == '4' || c.Text[0] == '5')
                 {
                     firstClassNum--;
                 }
@@ -104,6 +104,8 @@ namespace TrainTicketSystem
                     secondClassNum--;
                 }
             }
+            Debug.WriteLine(firstClassNum+ " " + secondClassNum);
+
         }
 
         //átküldés
@@ -223,7 +225,7 @@ namespace TrainTicketSystem
             }
         }
 
-        //done jegyek ne jelenjenek meg
+        //todo :done jegyek ne jelenjenek meg
 
         //checkboxok kikapcsolása
         private void disableChecboxes()

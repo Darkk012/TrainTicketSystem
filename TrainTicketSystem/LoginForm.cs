@@ -16,10 +16,6 @@ namespace TrainTicketSystem
         {
             InitializeComponent();
 
-            //tesztelesez
-            userNameTb.Text = "admin";
-            passwordTb.Text = "admin1";
-
         }
 
         //bejelentkezés

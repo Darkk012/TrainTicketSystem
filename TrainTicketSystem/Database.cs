@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using SQLite;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Security.Cryptography;
 
 namespace TrainTicketSystem
 {
@@ -160,6 +161,29 @@ namespace TrainTicketSystem
                 income += i.price;
             }
             return income;
+        }
+
+        public int getTicketId(int rid,int sc)
+        {
+            var tid = _connection.Query<Tickets>("SELECT id from Tickets where id_route="+rid+" and id in (select id_tickets from Seats where seatCode='"+sc+"')");
+            return tid[0].Id;
+        }
+
+        public Tickets getTicketsById(int tid)
+        {
+            var t = _connection.Query<Tickets>("SELECT * from Tickets where id="+tid);
+            return t[0];
+        }
+
+        public List<int> getTicketSeats(int tid)
+        {
+            List<int> s = new List<int>();
+            var seats = _connection.Query<Seats>("SELECT seatCode from Seats WHERE id_tickets = "+tid);
+            foreach (var seat in seats)
+            {
+                s.Add(seat.seatCode);
+            }
+            return s;
         }
 
 

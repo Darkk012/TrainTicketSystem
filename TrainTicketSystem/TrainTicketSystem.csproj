@@ -103,6 +103,12 @@
     <Compile Include="TicketBuyerForm.Designer.cs">
       <DependentUpon>TicketBuyerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketInfoForm.Designer.cs">
+      <DependentUpon>TicketInfoForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdministratorForm.resx">
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="TicketBuyerForm.resx">
       <DependentUpon>TicketBuyerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketInfoForm.resx">
+      <DependentUpon>TicketInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
