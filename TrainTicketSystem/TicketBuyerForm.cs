@@ -104,7 +104,6 @@ namespace TrainTicketSystem
                     secondClassNum--;
                 }
             }
-            Debug.WriteLine(firstClassNum+ " " + secondClassNum);
 
         }
 
@@ -224,8 +223,6 @@ namespace TrainTicketSystem
 
             }
         }
-
-        //todo :done jegyek ne jelenjenek meg
 
         //checkboxok kikapcsolása
         private void disableChecboxes()

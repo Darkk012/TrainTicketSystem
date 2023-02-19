@@ -21,8 +21,6 @@ namespace TrainTicketSystem
             InitializeComponent();
             disableChecboxes();
             incomeLabel.Text = "Teljes Bevétel:";
-
-            //todo: done jegyeket ne töltse be
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,7 +161,10 @@ namespace TrainTicketSystem
         //updateli a jegyeket
         private void finishRoutes_Click(object sender, EventArgs e)
         {
-           //todo: updateli a jegyeket
+            db.updateTickets();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

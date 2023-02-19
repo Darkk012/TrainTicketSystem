@@ -69,6 +69,11 @@ namespace TrainTicketSystem
             }
         }
 
+        ~DatabaseHandler()
+        {
+            _connection.Close();
+        }
+
         public List<string> getRoutes()
         {
             var routes = _connection.Query<Route>("SELECT firstStation,lastStation from Route GROUP by firstStation,lastStation");
@@ -144,7 +149,7 @@ namespace TrainTicketSystem
         public List<int> getTakenSeats(int rid)
         {
             List<int> s = new List<int>();
-            var seats = _connection.Query<Seats>("SELECT seatCode from Seats WHERE id_tickets in (SELECT id from Tickets where id_route='"+ rid+ "')");
+            var seats = _connection.Query<Seats>("SELECT seatCode from Seats WHERE id_tickets in (SELECT id from Tickets where done=0 and id_route='"+ rid+ "')");
             foreach (var seat in seats)
             {
                 s.Add(seat.seatCode);
@@ -155,7 +160,7 @@ namespace TrainTicketSystem
         public int getTotalIncome(int rid) 
         {
             int income = 0;
-            var inc = _connection.Query<Tickets>("SELECT price from Tickets where id_route=" + rid);
+            var inc = _connection.Query<Tickets>("SELECT price from Tickets where done=0 and id_route=" + rid);
             foreach (var i in inc)
             {
                 income += i.price;
@@ -165,7 +170,7 @@ namespace TrainTicketSystem
 
         public int getTicketId(int rid,int sc)
         {
-            var tid = _connection.Query<Tickets>("SELECT id from Tickets where id_route="+rid+" and id in (select id_tickets from Seats where seatCode='"+sc+"')");
+            var tid = _connection.Query<Tickets>("SELECT id from Tickets where done= 0 and id_route="+rid+" and id in (select id_tickets from Seats where seatCode='"+sc+"')");
             return tid[0].Id;
         }
 
@@ -186,6 +191,12 @@ namespace TrainTicketSystem
             return s;
         }
 
+        public void updateTickets()
+        {
+
+            var res = _connection.Query<Tickets>("UPDATE Tickets set done=1");
+            MessageBox.Show("Az összes vonatjárat sikeresen beért!");
+        }
 
     }
 
