@@ -61,7 +61,7 @@
             this.label1.Location = new System.Drawing.Point(77, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 20);
+            this.label1.Size = new System.Drawing.Size(161, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Felhasználó név:";
             // 
@@ -71,7 +71,7 @@
             this.label2.Location = new System.Drawing.Point(147, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Jelszó:";
             // 
@@ -80,7 +80,7 @@
             this.userNameTb.Location = new System.Drawing.Point(234, 47);
             this.userNameTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userNameTb.Name = "userNameTb";
-            this.userNameTb.Size = new System.Drawing.Size(150, 26);
+            this.userNameTb.Size = new System.Drawing.Size(150, 30);
             this.userNameTb.TabIndex = 3;
             this.userNameTb.Text = "username";
             // 
@@ -90,22 +90,24 @@
             this.passwordTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordTb.Name = "passwordTb";
             this.passwordTb.PasswordChar = '*';
-            this.passwordTb.Size = new System.Drawing.Size(150, 26);
+            this.passwordTb.Size = new System.Drawing.Size(150, 30);
             this.passwordTb.TabIndex = 4;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(474, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(474, 28);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,13 +116,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.fileToolStripMenuItem.Text = "&Fájl";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.exitToolStripMenuItem.Text = "&Bezárás";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -129,19 +131,19 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.helpToolStripMenuItem.Text = "&Súgó";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
             this.aboutToolStripMenuItem.Text = "&Infó";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 271);
             this.Controls.Add(this.menuStrip1);
